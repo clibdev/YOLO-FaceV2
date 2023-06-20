@@ -4,6 +4,7 @@ Differences between original repository and fork:
 
 * Compatibility with PyTorch >=2.0. (🔥)
 * The following deprecations and errors has been fixed:
+  * UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument.
   * AttributeError: 'Upsample' object has no attribute 'recompute_scale_factor'.
 
 # YOLO-FaceV2
