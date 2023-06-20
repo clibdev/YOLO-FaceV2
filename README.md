@@ -3,39 +3,19 @@
 Differences between original repository and fork:
 
 * Compatibility with PyTorch >=2.0. (🔥)
+* The [wider_val.txt](data/widerface/val/wider_val.txt) file for WIDERFace evaluation. 
 * The following deprecations and errors has been fixed:
   * UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument.
   * AttributeError: 'Upsample' object has no attribute 'recompute_scale_factor'.
 
-# YOLO-FaceV2
+# Installation
 
-## Introduction
-YOLO-FaceV2: A Scale and Occlusion Aware Face Detector    
-*[https://arxiv.org/abs/2208.02019](https://arxiv.org/abs/2208.02019)*  
-
-## Framework Structure
-![](data/images/yolo-facev2.jpg)
-
-## Environment Requirments
-Create a Python Virtual Environment.   
-```shell
-conda create -n {name} python=x.x
-```
-
-Enter Python Virtual Environment.   
-```shell
-conda activate {name}
-```
-
-Install pytorch in *[this](https://pytorch.org/get-started/previous-versions/)*.  
-```shell 
-pip install torch==1.10.0+cu111 torchvision==0.11.0+cu111 torchaudio==0.10.0 -f https://download.pytorch.org/whl/torch_stable.html
-```
-
-Install other python package.   
 ```shell
 pip install -r requirements.txt
 ```
+
+
+# YOLO-FaceV2
 
 ## Step-Through Example
 ### Installation
@@ -113,41 +93,3 @@ for i in 0 1 2 3 4 5 6 7; do
   "$(while true; do nohup python train.py... --device $i --evolve 1 > evolve_gpu_$i.log; done)" &
 done
 ```
-
-## Reference
-*[https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5)*    
-    
-*[https://github.com/deepcam-cn/yolov5-face](https://github.com/deepcam-cn/yolov5-face)*   
-    
-*[https://github.com/open-mmlab/mmdetection](https://github.com/open-mmlab/mmdetection)*   
-    
-*[https://github.com/dongdonghy/repulsion_loss_pytorch](https://github.com/dongdonghy/repulsion_loss_pytorch)*   
-
-
-## Cite
-
-If you think this work is helpful for you, please cite
-
-```shell
-@ARTICLE{2022arXiv220802019Y,
-       author = {{Yu}, Ziping and {Huang}, Hongbo and {Chen}, Weijun and {Su}, Yongxin and {Liu}, Yahui and {Wang}, Xiuying},
-        title = "{YOLO-FaceV2: A Scale and Occlusion Aware Face Detector}",
-      journal = {arXiv e-prints},
-     keywords = {Computer Science - Computer Vision and Pattern Recognition},
-         year = 2022,
-        month = aug,
-          eid = {arXiv:2208.02019},
-        pages = {arXiv:2208.02019},
-archivePrefix = {arXiv},
-       eprint = {2208.02019},
- primaryClass = {cs.CV},
-       adsurl = {https://ui.adsabs.harvard.edu/abs/2022arXiv220802019Y},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}
-
-
-```
-
-## Contact
-
-We use code's license is MIT License. The code can be used for business inquiries or professional support requests.
