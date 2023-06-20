@@ -1,3 +1,11 @@
+# Fork of [Krasjet-Yu/YOLO-FaceV2](https://github.com/Krasjet-Yu/YOLO-FaceV2)
+
+Differences between original repository and fork:
+
+* Compatibility with PyTorch >=2.0. (🔥)
+* The following deprecations and errors has been fixed:
+  * AttributeError: 'Upsample' object has no attribute 'recompute_scale_factor'.
+
 # YOLO-FaceV2
 
 ## Introduction
