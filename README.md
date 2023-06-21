@@ -3,6 +3,7 @@
 Differences between original repository and fork:
 
 * Compatibility with PyTorch >=2.0. (🔥)
+* Converted ONNX models from GitHub [releases page](https://github.com/clibdev/YOLO-FaceV2/releases). (🔥)
 * The [wider_val.txt](data/widerface/val/wider_val.txt) file for WIDERFace evaluation. 
 * The following deprecations and errors has been fixed:
   * UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument.
@@ -16,6 +17,12 @@ Differences between original repository and fork:
 ```shell
 pip install -r requirements.txt
 ```
+
+# Pretrained models
+
+| Name        | Link                                                                                                                                                                                          |
+|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| yolo-facev2 | [PyTorch](https://github.com/clibdev/YOLO-FaceV2/releases/latest/download/yolo-facev2_last.pt), [ONNX](https://github.com/clibdev/YOLO-FaceV2/releases/latest/download/yolo-facev2_last.onnx) |
 
 # Inference
 
