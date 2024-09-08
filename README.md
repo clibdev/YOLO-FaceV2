@@ -21,9 +21,11 @@ pip install -r requirements.txt
 
 # Pretrained models
 
-| Name        | Link                                                                                                                                                                                |
-|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| yolo-facev2 | [PyTorch](https://github.com/clibdev/YOLO-FaceV2/releases/latest/download/yolo-facev2.pt), [ONNX](https://github.com/clibdev/YOLO-FaceV2/releases/latest/download/yolo-facev2.onnx) |
+* Download links:
+
+| Name        | Model Size (MB) | Link                                                                                                                                                                                  | SHA-256                                                                                                                              |
+|-------------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| YOLO-FaceV2 | 36.2<br>71.8    | [PyTorch](https://github.com/clibdev/YOLO-FaceV2/releases/latest/download/yolo-facev2.pt)<br>[ONNX](https://github.com/clibdev/YOLO-FaceV2/releases/latest/download/yolo-facev2.onnx) | f424fd437b22711207c48aac4c205d844eaea2f3c12e2f3f7ecd7f9650634e44<br>8ad769e4e9fd5869baa4243367e041df901a228e121a1602deec85074d2bd7ed |
 
 # Inference
 
