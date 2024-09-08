@@ -2,12 +2,13 @@
 
 Differences between original repository and fork:
 
-* Compatibility with PyTorch >=2.0. (🔥)
+* Compatibility with PyTorch >=2.4. (🔥)
 * Converted ONNX models from GitHub [releases page](https://github.com/clibdev/YOLO-FaceV2/releases). (🔥)
 * The [wider_val.txt](data/widerface/val/wider_val.txt) file for WIDERFace evaluation. 
 * The following deprecations and errors has been fixed:
   * UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument.
   * DeprecationWarning: 'np.float' is a deprecated alias for builtin 'float'.
+  * FutureWarning: You are using 'torch.load' with 'weights_only=False'.
   * FutureWarning: Cython directive 'language_level' not set.
   * Cython Warning: Using deprecated NumPy API.
   * AttributeError: 'Upsample' object has no attribute 'recompute_scale_factor'.
@@ -20,14 +21,14 @@ pip install -r requirements.txt
 
 # Pretrained models
 
-| Name        | Link                                                                                                                                                                                          |
-|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| yolo-facev2 | [PyTorch](https://github.com/clibdev/YOLO-FaceV2/releases/latest/download/yolo-facev2_last.pt), [ONNX](https://github.com/clibdev/YOLO-FaceV2/releases/latest/download/yolo-facev2_last.onnx) |
+| Name        | Link                                                                                                                                                                                |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| yolo-facev2 | [PyTorch](https://github.com/clibdev/YOLO-FaceV2/releases/latest/download/yolo-facev2.pt), [ONNX](https://github.com/clibdev/YOLO-FaceV2/releases/latest/download/yolo-facev2.onnx) |
 
 # Inference
 
 ```shell
-python detect.py --weights yolo-facev2_last.pt --source data/images/bus.jpg
+python detect.py --weights yolo-facev2.pt --source data/images/bus.jpg
 ```
 
 # WIDERFace evaluation
@@ -36,7 +37,7 @@ python detect.py --weights yolo-facev2_last.pt --source data/images/bus.jpg
 * Move dataset to `data/widerface/val` directory.
 
 ```shell
-python widerface_pred.py --weights yolo-facev2_last.pt --dataset_folder data/widerface/val/images
+python widerface_pred.py --weights yolo-facev2.pt --dataset_folder data/widerface/val/images
 ```
 ```shell
 cd widerface_evaluate
@@ -54,5 +55,5 @@ python evaluation.py
 pip install onnx
 ```
 ```shell
-python models/export.py --weights yolo-facev2_last.pt --grid
+python models/export.py --weights yolo-facev2.pt --grid
 ```
